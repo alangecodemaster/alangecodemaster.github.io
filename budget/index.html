@@ -1,1 +1,57 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Better Budgeting: Digital Envelopes</title>
+	<meta name="description" content="A budgeting app for the well-refined financier of self-reliance." >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/budget-envelopes.css >
+</head>
+<body>
+
+<app-container>
+	<h1>Digital Budget Envelopes</h1>
+	<p class="get-info" onclick="document.querySelector('about').classList.add('active'); document.querySelector('body').classList.add('active');"><span>?</span></p>
+	<div class="button-controls">
+		<button onclick="addBudget()">Add Envelope</button>
+		<button onclick="archiveBudgetsConfirm()">Restet/Archive Budgets</button>
+		<button onclick="importBudgetConfirm()">Import Previous Budget</button>
+	</div>
+	<div class="budget-totals">
+		<div class="total-budget"><span>Total Budget Amount: </span><span class="number-amounts" id="total-start">$0</span></div>
+		<div class="total-spent"><span>Total Spent: </span><span class="number-amounts" id="total-spent">$0</span></div>
+		<div class="total-remaining"><span>Total Remaining: </span><span class="number-amounts" id="total-remaining">$0</span></div>
+	</div>
+	
+	<div class="budget-cards"></div>
+  
+	<about>
+		<p class="x-out" onclick="document.querySelector('about').classList.remove('active')">X</p>
+		<h2 style="margin-top: 0;">About:</h2>
+		<p>In finance, it is important to keep track of your money. Every time you receive a paycheck, you should decide how you are going to use all of it, down to the very last dollar. While some people continue to use envelopes and cash to divide their budgets into categories, we know this approach is lame and only old grandmas still do it. What's better? Making those envelopes digital, which is WAY cooler.</p>
+		<h2>How to Use</h2>
+		<p>This app is intended to replace those boring cash envelopes with an easy-to-use, cool app instead. There are just a few things you have to know before you can get workin' on your budget to make it rain:</p>
+		<ul>
+			<li>Add a budget envelope by clicking "Add Envelope". Add as many envelopes as you want to track (but don't get crazy - or do, I don't care; I'm not your mom).</li>
+			<li>Want to get rid of an envelope? Just trash that sucker down at the bottom of each budget card.</li>
+			<li>Enter the starting budget for each envelope.</li>
+			<li>Track each of your expenses by clicking the "Add Budget Item" button as many times as you want – no more pointless reciepts. "No, I would not like my receipt, Karen! You throw that thing away."</li>
+			<li>Partied too hard? Want to get rid of an expense you added to cook the books? Just click the three dots on the side of the budget item and confirm it's deletion.</li>
+		</ul>
+		<p>When you add new amounts, my sick algorithms figure out all the math for you. You can even see how much money you have over all your budgets, how much total you have spent, and how much you have remaining through all your budgets. I do it because I care.</p>
+		<h2>I'm Out!</h2>
+		<p>Budgets don't last forever, I get that. So every time you get paid you gotta get some new envelopes. When you are ready to reset your budget, click the "Reset/Archive Budgets" button. This will clear everything for you, set everything anew, but it will also download your current budget for you to look at later. Just save it in a safe spot on your phone you'll be bangin' on all cylinders.</p>
+		<h2>Trackers Gonna Track</h2>
+		<p>Ready to see some old budgets? Use the "Import" button to select a saved/archived budget. The app will save your current budget to use again later.</p>
+		<h2>That's It!</h2>
+		<p>Are you still reading this!? Are you one of those people that, like, reads all the terms and conditions because you feel dishonest if you don't? Boy, I don't envy that life. Maybe consider getting some counseling, but first: get using this app!</p>
+	</about>
+  
+	<a class="downloader" download="budget.budgets" >Something</a>
+	<input class="uploader" onchange="uploadBudget()" type="file">
+</app-container>
+
+
+</body>
+</html>
